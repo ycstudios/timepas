@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Believe In.....</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Focus Mode Button -->
+    <button id="focus-btn">Focus Mode</button>
+    <div id="focus-overlay">
+        <p id="focus-message">Stay focused! Keep pushing forward! 🚀</p>
+    </div>
+
+    <!-- Motivational Quotes Widget -->
+    <script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer></script>
+    <div class="commonninja_component pid-cfdb0b95-5024-4a9a-a0d5-1152bbfbcffd"></div>
+
+    <!-- Quote Box -->
+    <div id="quote-box">
+        <p id="quote-text">Loading...</p>
+    </div>
+
+    <!-- Motivational Audio -->
+    <audio id="motivation-audio">
+        <source src="New Project.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+
+    <!-- Study Progress Tracker -->
+    <section class="progress-section">
+        <h2>📊 Study Progress Tracker</h2>
+        <p>Set your daily study goal and track your progress!</p>
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar">0%</div>
+        </div>
+        <p><strong>Hours Studied:</strong> <span id="hours-studied">0</span> / 6</p>
+        <div class="controls">
+            <button onclick="updateProgress(1)">+1 Hour</button>
+            <button onclick="updateProgress(-1)">-1 Hour</button>
+            <button onclick="resetProgress()">Reset</button>
+        </div>
+        <p id="motivation-message"></p>
+    </section>
+
+    <!-- Future You Message -->
+    <section class="future-message-section">
+        <h2>🚀 Future You Message</h2>
+        <p>Enter your name for a personalized motivation boost!</p>
+        <input type="text" id="name-input" placeholder="Enter your name...">
+        <button onclick="saveName()">Save</button>
+        <p id="future-message"></p>
+    </section>
+
+    <!-- Live Motivation Feed -->
+    <section class="live-feed-section">
+        <h2>👀 Who’s Grinding? - Live Motivation Feed</h2>
+        <p>See what others are achieving in real-time!</p>
+        <input type="text" id="study-update" placeholder="What did you complete?">
+        <button onclick="addUpdate()">Post Update</button>
+        <div id="live-feed"></div>
+    </section>
+
+    <!-- Mind Reset - Focus Break -->
+    <section class="focus-break-section">
+        <h2>💭 Mind Reset - Quick Focus Break</h2>
+        <p>Take a 60-second break to refresh your mind!</p>
+        <button id="break-btn" onclick="startBreak()">💆 Take a 60s Focus Break</button>
+
+        <div id="break-overlay">
+            <p id="break-message">Relax... Breathe in... Breathe out... 😌</p>
+            <p id="countdown">60s</p>
+        </div>
+
+        <audio id="relax-audio">
+            <source src="ocean-waves-112906.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <p>Made with ❤️ by <a href="https://www.linkedin.com/in/yash-chandanshive" target="_blank">Yash Chandanshive</a></p>
+    </footer>
+
+    <!-- Popup (Appears After 1 Minute) -->
+    <div id="popup">
+        <div class="popup-content">
+            <p>🚀 Made by <strong>Yash Chandanshive</strong>! Check out my Portfolio:</p>
+            <a href="https://yash-chandanshive.netlify.app/" target="_blank">Visit Yash's Profile</a>
+            <button onclick="closePopup()">Close</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>
