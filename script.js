@@ -274,8 +274,3 @@ const cursorEffect = document.createElement("div");
 cursorEffect.classList.add("cursor-effect");
 document.body.appendChild(cursorEffect);
 
-document.addEventListener("mousemove", (event) => {
-    cursorEffect.style.top = `${event.clientY}px`;
-    cursorEffect.style.left = `${event.clientX}px`;
-    cursorEffect.textContent = "Success";
-});
