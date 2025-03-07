@@ -112,25 +112,25 @@ let audio = document.getElementById("motivation-audio");
 
 focusBtn.addEventListener("click", function () {
     if (overlay.style.display === "flex") {
-        overlay.style.display = "none"; // Disable Focus Mode
+        overlay.style.display = "none"; 
         focusBtn.innerText = "Focus Mode";
-        audio.pause(); // Stop audio when exiting
-        audio.currentTime = 0; // Reset audio
+        audio.pause();
+        audio.currentTime = 0; 
     } else {
-        overlay.style.display = "flex"; // Enable Focus Mode
+        overlay.style.display = "flex"; 
         focusBtn.innerText = "Exit Focus Mode";
-        audio.play(); // Play motivation audio
+        audio.play(); 
         
        
     }
 });
 
-/* Allow Clicking Anywhere to Exit */
+
 overlay.addEventListener("click", function () {
-    overlay.style.display = "none"; // Hide overlay
+    overlay.style.display = "none"; 
     focusBtn.innerText = "Focus Mode";
-    audio.pause(); // Stop audio when clicking anywhere
-    audio.currentTime = 0; // Reset audio
+    audio.pause(); 
+    audio.currentTime = 0;
 });
 
 let studyGoal = 6;
@@ -194,7 +194,7 @@ function showFutureMessage(name) {
 }
 document.addEventListener("DOMContentLoaded", function () {
     loadFeed();
-    simulateLiveUpdates(); // Start adding random updates
+    simulateLiveUpdates();
 });
 
 function addUpdate() {
@@ -203,13 +203,13 @@ function addUpdate() {
         let userName = localStorage.getItem("userName") || "Someone";
         let message = `${userName} just ${input}! 🎯`;
         saveUpdate(message);
-        document.getElementById("study-update").value = ""; // Clear input
+        document.getElementById("study-update").value = ""; 
     }
 }
 
 function saveUpdate(message) {
     let updates = JSON.parse(localStorage.getItem("studyFeed")) || [];
-    updates.unshift(message); // Add new update at the top
+    updates.unshift(message); 
     localStorage.setItem("studyFeed", JSON.stringify(updates));
     loadFeed();
 }
@@ -220,7 +220,6 @@ function loadFeed() {
     feedContainer.innerHTML = updates.map(update => `<div class="feed-item">${update}</div>`).join('');
 }
 
-// Simulated random updates from "other users"
 function simulateLiveUpdates() {
     let randomUsers = ["Aryan","KDM","Yash", "Neha", "Rohan", "Priya", "Aditya", "Sakshi"];
     let randomMessages = [
@@ -274,3 +273,12 @@ const cursorEffect = document.createElement("div");
 cursorEffect.classList.add("cursor-effect");
 document.body.appendChild(cursorEffect);
 
+function x(){
+    for(var i=0; i<=5; i++){
+        setTimeout(() => {
+                    console.log(i);
+                },i*1000);
+    }
+    console.log("js classes is on");
+}
+x();
